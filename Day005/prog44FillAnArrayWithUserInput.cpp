@@ -18,8 +18,10 @@ int main(){
     }
 
     std::cout << "You like the following foods:\n";
-    for(int i = 0; !foods[i].empty(); i++){
-        std::cout << foods[i] << " ";
+    for(int i = 0; i < size; i++){ 
+        if(!foods[i].empty()){     
+            std::cout << foods[i] << " ";
+        }
     }
     
     return 0;
