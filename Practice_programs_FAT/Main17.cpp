@@ -25,27 +25,27 @@ using namespace std;
 class LibraryAdmin; // Forward declaration
 
 class LibraryBook {
-private:
-    string title;
-    string author;
-    string ISSN;
-    static int bookCount;   // Static variable to count books
-public:
-    // Constructor
-    LibraryBook(string t, string a, string i) {
-        title = t;
-        author = a;
-        ISSN = i;
-        bookCount++;        // Increase count when an object is created
-    }
+    private:
+        string title;
+        string author;
+        string ISSN;
+        static int bookCount;   // Static variable to count books
+    public:
+        // Constructor
+        LibraryBook(string t, string a, string i) {
+            title = t;
+            author = a;
+            ISSN = i;
+            bookCount++;        // Increase count when an object is created
+        }
 
-    // Declare LibraryAdmin as a friend class
-    friend class LibraryAdmin;
+        // Declare LibraryAdmin as a friend class
+        friend class LibraryAdmin;
 
-    // Static function to return count
-    static int getBookCount() {
-        return bookCount;
-    }
+        // Static function to return count
+        static int getBookCount() {
+            return bookCount;
+        }
 };
 
 // Initialize static member
