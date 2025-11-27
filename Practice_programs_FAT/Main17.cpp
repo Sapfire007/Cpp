@@ -52,24 +52,24 @@ class LibraryBook {
 int LibraryBook::bookCount = 0;
 
 class LibraryAdmin {
-public:
-    // a. Display details
-    void displayDetails(LibraryBook &b) {
-        cout << "Library Book Details: Title: \"" << b.title << "\", Author: \"" << b.author << "\", ISSN: " << b.ISSN << endl;
-    }
+    public:
+        // a. Display details
+        void displayDetails(LibraryBook &b) {
+            cout << "Library Book Details: Title: \"" << b.title << "\", Author: \"" << b.author << "\", ISSN: " << b.ISSN << endl;
+        }
 
-    // b. Show total number of LibraryBook objects
-    void showTotalBooks() {
-        cout << "Total number of LibraryBook objects: " << LibraryBook::getBookCount() << endl;
-    }
+        // b. Show total number of LibraryBook objects
+        void showTotalBooks() {
+            cout << "Total number of LibraryBook objects: " << LibraryBook::getBookCount() << endl;
+        }
 
-    // c. Modify book details
-    void modifyBook(LibraryBook &b, string newTitle, string newAuthor, string newISSN) {
-        b.title = newTitle;
-        b.author = newAuthor;
-        b.ISSN = newISSN;
-        cout << "Book details updated!" << endl;
-    }
+        // c. Modify book details
+        void modifyBook(LibraryBook &b, string newTitle, string newAuthor, string newISSN) {
+            b.title = newTitle;
+            b.author = newAuthor;
+            b.ISSN = newISSN;
+            cout << "Book details updated!" << endl;
+        }
 };
 
 int main() {
