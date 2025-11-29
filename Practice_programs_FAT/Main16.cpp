@@ -18,44 +18,44 @@ Vehicle Type: Bike, Maker: Honda, Model: Glamour, Price: 15000, Engine: 125cc
 using namespace std;
 
 class Vehicle {
-protected:
-    string maker, model;
-    float price;
+    protected:
+        string maker, model;
+        float price;
 
-public:
-    Vehicle(string mk, string md, float pr) {
-        maker = mk;
-        model = md;
-        price = pr;
-    }
+    public:
+        Vehicle(string mk, string md, float pr) {
+            maker = mk;
+            model = md;
+            price = pr;
+        }
 
-    virtual void displayDetails() {
-        cout << "Vehicle Details\n";
-    }
+        virtual void displayDetails() {
+            cout << "Vehicle Details\n";
+        }
 };
 
 class Car : public Vehicle {
     string type;   // e.g., SUV, MUV
-public:
-    Car(string mk, string md, float pr, string t) : Vehicle(mk, md, pr) {
-        type = t;
-    }
+    public:
+        Car(string mk, string md, float pr, string t) : Vehicle(mk, md, pr) {
+            type = t;
+        }
 
-    void displayDetails() override {
-        cout << "Vehicle Type: Car, Maker: " << maker << ", Model: " << model << ", Price: " << price << ", Type: " << type << endl;
-    }
+        void displayDetails() override {
+            cout << "Vehicle Type: Car, Maker: " << maker << ", Model: " << model << ", Price: " << price << ", Type: " << type << endl;
+        }
 };
 
 class Bike : public Vehicle {
     string engine;   // e.g., 125cc
-public:
-    Bike(string mk, string md, float pr, string eng) : Vehicle(mk, md, pr) {
-        engine = eng;
-    }
+    public:
+        Bike(string mk, string md, float pr, string eng) : Vehicle(mk, md, pr) {
+            engine = eng;
+        }
 
-    void displayDetails() override {
-        cout << "Vehicle Type: Bike, Maker: " << maker << ", Model: " << model << ", Price: " << price << ", Engine: " << engine << endl;
-    }
+        void displayDetails() override {
+            cout << "Vehicle Type: Bike, Maker: " << maker << ", Model: " << model << ", Price: " << price << ", Engine: " << engine << endl;
+        }
 };
 
 int main() {

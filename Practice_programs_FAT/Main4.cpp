@@ -10,34 +10,34 @@ room details from the Apartment class.
 using namespace std;
 
 class Apartment {
-public:
-    class Room {               // nested class
-        public:
-            int roomNumber;
-            float area;
+    public:
+        class Room {               // nested class
+            public:
+                int roomNumber;
+                float area;
 
-            void set(int n, float a) {
-                roomNumber = n;
-                area = a;
-            }
+                void set(int n, float a) {
+                    roomNumber = n;
+                    area = a;
+                }
 
-            void show() {
-                cout << "Room " << roomNumber << " - Area: " << area << endl;
-            }
-    };
+                void show() {
+                    cout << "Room " << roomNumber << " - Area: " << area << endl;
+                }
+        };
 
-    Room rooms[5];
-    int count = 0;
+        Room rooms[5];
+        int count = 0;
 
-    void addRoom(int n, float a) {
-        rooms[count].set(n, a);
-        count++;
-    }
+        void addRoom(int n, float a) {
+            rooms[count].set(n, a);
+            count++;
+        }
 
-    void displayRooms() {
-        for (int i = 0; i < count; i++)
-            rooms[i].show();
-    }
+        void displayRooms() {
+            for (int i = 0; i < count; i++)
+                rooms[i].show();
+        }
 };
 
 int main() {

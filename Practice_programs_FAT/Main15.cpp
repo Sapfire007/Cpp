@@ -17,37 +17,37 @@ Rectangles have the same area: Yes
 using namespace std;
 
 class Rectangle {
-private:
-    float length, width;
+    private:
+        float length, width;
 
-public:
-    Rectangle(float l, float w) {
-        length = l;
-        width = w;
-    }
+    public:
+        Rectangle(float l, float w) {
+            length = l;
+            width = w;
+        }
 
-    // Copy constructor
-    Rectangle(const Rectangle &r) {
-        length = r.length;
-        width = r.width;
-    }
+        // Copy constructor
+        Rectangle(const Rectangle &r) {
+            length = r.length;
+            width = r.width;
+        }
 
-    float area() const {
-        return length * width;
-    }
+        float area() const {
+            return length * width;
+        }
 
-    float perimeter() const {
-        return 2 * (length + width);
-    }
+        float perimeter() const {
+            return 2 * (length + width);
+        }
 
-    void display() const {
-        cout << "Length = " << length << ", Width = " << width << endl;
-    }
+        void display() const {
+            cout << "Length = " << length << ", Width = " << width << endl;
+        }
 
-    // Operator overloading for == (compare areas)
-    bool operator==(const Rectangle &r) const {
-        return this->area() == r.area();
-    }
+        // Operator overloading for == (compare areas)
+        bool operator==(const Rectangle &r) const {
+            return this->area() == r.area();
+        }
 };
 
 int main() {

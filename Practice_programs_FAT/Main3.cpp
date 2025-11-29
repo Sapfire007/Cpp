@@ -10,27 +10,27 @@ also print average marks for the class and name of student who is the topper.
 using namespace std;
 
 class Student {
-private:
-    string name;
-    int rollNumber;
-    float marks;
+    private:
+        string name;
+        int rollNumber;
+        float marks;
 
-public:
-    void input() {
-        cout << "Enter name, roll, marks: ";
-        cin >> name >> rollNumber >> marks;
-    }
+    public:
+        void input() {
+            cout << "Enter name, roll, marks: ";
+            cin >> name >> rollNumber >> marks;
+        }
 
-    void display() {
-        cout << name << " " << rollNumber << " " << marks << endl;
-    }
+        void display() {
+            cout << name << " " << rollNumber << " " << marks << endl;
+        }
 
-    float getMarks() { 
-        return marks;
-    }
-    string getName() { 
-        return name; 
-    }
+        float getMarks() { 
+            return marks;
+        }
+        string getName() { 
+            return name; 
+        }
 };
 
 int main() {

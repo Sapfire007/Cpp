@@ -9,32 +9,32 @@ details, demonstrating constructor usage.
 using namespace std;
 
 class Book {
-private:
-    string title, author;
-    float price;
+    private:
+        string title, author;
+        float price;
 
-public:
-    Book() {                       
-        title = "NA";
-        author = "NA";
-        price = 0;
-    }
+    public:
+        Book() {                       
+            title = "NA";
+            author = "NA";
+            price = 0;
+        }
 
-    Book(string t, string a, float p) {   
-        title = t;
-        author = a;
-        price = p;
-    }
+        Book(string t, string a, float p) {   
+            title = t;
+            author = a;
+            price = p;
+        }
 
-    void display() {
-        cout << title << " | " << author << " | " << price << endl;
-    }
+        void display() {
+            cout << title << " | " << author << " | " << price << endl;
+        }
 
-    void update(string t, string a, float p) {
-        title = t;
-        author = a;
-        price = p;
-    }
+        void update(string t, string a, float p) {
+            title = t;
+            author = a;
+            price = p;
+        }
 };
 
 int main() {

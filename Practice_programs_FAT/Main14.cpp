@@ -14,34 +14,34 @@ Sample Output: Account No: 12345, Name: Shyam, Balance: 1200
 using namespace std;
 
 class Account {
-private:
-    int accNo;
-    string name;
-    float balance;
+    private:
+        int accNo;
+        string name;
+        float balance;
 
-public:
-    void init(int a, string n, float b) {
-        accNo = a;
-        name = n;
-        balance = b;
-    }
+    public:
+        void init(int a, string n, float b) {
+            accNo = a;
+            name = n;
+            balance = b;
+        }
 
-    void deposit(float amt) {
-        balance += amt;
-    }
+        void deposit(float amt) {
+            balance += amt;
+        }
 
-    void withdraw(float amt) {
-        if (amt > balance)
-            cout << "Insufficient Balance!\n";
-        else
-            balance -= amt;
-    }
+        void withdraw(float amt) {
+            if (amt > balance)
+                cout << "Insufficient Balance!\n";
+            else
+                balance -= amt;
+        }
 
-    void display() {
-        cout << "Account No: " << accNo
-             << ", Name: " << name
-             << ", Balance: " << balance << endl;
-    }
+        void display() {
+            cout << "Account No: " << accNo
+                << ", Name: " << name
+                << ", Balance: " << balance << endl;
+        }
 };
 
 int main() {
